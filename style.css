@@ -1,0 +1,483 @@
+/*!Creating some varibles to be easier changin colors*/
+:root {
+  --primary_color: #dd7850;
+  --secondary_color: #d6b9ad;
+  --terciary_color: #c4d8e4;
+  --darker_primary_color: #c26b49;
+  --gradient_primary: linear-gradient(to bottom right, #fde889, #6d703d);
+  --gradient_secondary: linear-gradient(
+    to top left,
+    rgb(250, 215, 150),
+    rgb(207, 140, 14)
+  );
+}
+/*!ANIMATIONS*/
+@keyframes movetoright {
+  from {
+    transform: scale(1.5, 1.5);
+    color: white;
+  }
+  to {
+    transform: scale(1, 1);
+    color: inherit;
+  }
+}
+
+.anim_h4 {
+  animation-name: movetoright;
+  animation-duration: 2s;
+}
+/*!All the main elements*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+body {
+  height: 100%;
+  font-family: "Dosis", sans-serif;
+  font-weight: 600;
+  line-height: 2;
+  color: rgb(26, 24, 20);
+  background-image: linear-gradient(
+    to right,
+    rgb(226, 222, 222),
+    rgb(255, 255, 255)
+  );
+}
+main {
+  min-height: 100%;
+}
+
+h1 {
+  font-size: 3.5rem;
+  line-height: 4.2rem;
+}
+h3 {
+  font-size: 2rem;
+  padding: 3rem;
+  text-align: center;
+  align-content: center;
+}
+h4 {
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 2rem;
+}
+h4.ferr_img {
+  border-top: 2px solid;
+  border-radius: 20%;
+}
+h5 {
+  font-size: 1rem;
+  padding: 0 23rem;
+}
+h6 {
+  font-size: 1rem;
+}
+
+p {
+  font-size: 1.15rem;
+}
+.p_footer {
+  font-size: 0.9rem;
+}
+/*!HEADER*/
+header {
+  height: 9rem;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.highlight {
+  position: relative;
+}
+.highlight::after {
+  display: block;
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0.5;
+  transform: scale(1.06, 0.85) skewX(-12deg);
+  background-image: var(--gradient_secondary);
+}
+/*!LINKS*/
+.git_link:link,
+.git_link:visited {
+  text-decoration: none;
+  color: inherit;
+}
+.a_footer {
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.a_footer:link,
+.a_footer:visited {
+  text-decoration: none;
+  color: inherit;
+  font-size: 0.9rem;
+}
+.a_footer:hover {
+  text-decoration: none;
+  color: var(--primary_color);
+}
+
+/*!LISTS*/
+.ul_footer {
+  display: flex;
+  gap: 4.5rem;
+  font-size: 1.25rem;
+  text-decoration: none;
+  color: inherit;
+  list-style: none;
+}
+.a_footer-link:link,
+.a_footer-link:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+.a_footer-link:hover {
+  color: var(--primary_color);
+}
+/*!NAVIGATION ELEMENTS*/
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 6rem;
+}
+.nav.sticky {
+  position: fixed;
+  background-color: rgb(255, 255, 255, 0.85);
+}
+.div_nav {
+  align-items: center;
+  align-content: center;
+  display: flex;
+  gap: 2rem;
+}
+.name {
+  color: var(--primary_color);
+}
+.photo {
+  border-radius: 400rem 200rem;
+  height: 6rem;
+}
+.nav_links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.nav_list {
+  padding-left: 4rem;
+}
+
+.nav_item:link,
+.nav_item:visited {
+  font-weight: 900;
+  color: inherit;
+  display: block;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+.nav_item:hover {
+  transform: scale(1.2, 1.2);
+  color: var(--primary_color);
+}
+
+.nav_item-btn:link,
+.nav_item-btn:visited {
+  text-decoration: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 3rem;
+  color: inherit;
+  background-color: var(--primary_color);
+}
+
+.nav_item-btn:hover,
+.nav_item-btn:active {
+  color: rgb(252, 193, 85);
+  background-color: var(--darker_primary_color);
+}
+
+.nav.sticky {
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.95);
+  z-index: 1;
+  height: 7rem;
+}
+/*! BUTTONS*/
+.btn_slider {
+  position: absolute;
+  top: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.01);
+  color: #333;
+  height: 3rem;
+  width: 3rem;
+  font-size: 3rem;
+  cursor: pointer;
+}
+.btn_slider:hover {
+  color: var(--primary_color);
+}
+.btn_left {
+  left: 25%;
+  transform: translate(-50%, -50%);
+}
+.btn_right {
+  right: 25%;
+  transform: translate(50%, -50%);
+}
+.btn_footer {
+  position: relative;
+  left: 78rem;
+  top: -3.5rem;
+  color: rgb(192, 189, 189);
+  font-size: 4rem;
+  cursor: pointer;
+  text-decoration: none;
+  /* padding: 0rem 5rem 5rem 10rem; */
+}
+.btn_footer:hover {
+  color: var(--primary_color);
+  transform: scale(1.2, 1.2);
+}
+/*! SECTIONS */
+.section {
+  padding: 4rem 15rem;
+  text-align: center;
+  border-top: 2px solid;
+  transition: transform 1s, opacity 1s;
+}
+
+.section-1 {
+  padding: 12rem 20rem;
+  height: 38.7rem;
+}
+/* .section-1::before {
+  content: "";
+  position: absolute;
+  background-image: url(Imagens/Site.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  opacity: 0.3;
+  top: 9rem;
+  bottom: 0px;
+  left: 0px;
+  right: 0px; */
+/* } */
+.section_hidden {
+  opacity: 0;
+  transform: translateY(10rem);
+}
+
+.section_footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 5rem;
+  background: #303036;
+  color: #d3d3d3;
+  position: relative;
+}
+/*!IMAGES*/
+.img_left {
+  height: 12rem;
+  border-radius: 200rem 150rem;
+}
+
+.img_sales {
+  height: 12rem;
+  border-radius: 150rem 200rem;
+}
+.img-lazy {
+  filter: blur(5px);
+  height: 12rem;
+}
+.img_tree {
+  height: 300px;
+}
+.img_hidden {
+  opacity: 0;
+}
+.img_general {
+  height: 12rem;
+}
+.img_css {
+  height: 10.4rem;
+}
+.img_blender {
+  height: 8rem;
+}
+.img_sql {
+  height: 7rem;
+}
+/*!DIVS*/
+.div_articles {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+}
+.div_slider {
+  position: relative;
+  max-width: 100rem;
+  margin: 0 auto;
+  height: 25rem;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.div_slide {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 1s;
+}
+.div_ferr_img {
+  padding: 3rem;
+  display: flex;
+  gap: 3rem;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+.div_footer-section {
+  display: flex;
+  position: absolute;
+  top: 2rem;
+  left: 25rem;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+}
+.div_footer {
+  position: flex;
+  float: right;
+  justify-content: center;
+  padding-top: 1rem;
+}
+.div_footer_bottom {
+  background: #343a40;
+  height: 2rem;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  left: 0rem;
+  bottom: 0rem;
+}
+.div_list-footer {
+  position: absolute;
+  top: 12rem;
+  left: 25rem;
+}
+/*! MODAL WINDOW*/
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* max-width: 60rem; */
+  background: #f3f3f3;
+  padding: 2rem 6rem;
+  box-shadow: 0 6rem 10rem rgb(0, 0, 0, 0.4);
+  z-index: 100;
+  transition: all 0.4s;
+  border-radius: 20%;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(3px);
+  background: rgb(52, 58, 64, 0.5);
+  z-index: 50;
+  transition: all 0.5s;
+}
+.modal_form {
+  display: grid;
+  align-items: center;
+  margin: 5 5rem;
+  grid-template-columns: 1fr 4fr;
+  gap: 1.5rem;
+}
+.modal_form label {
+  font-size: 1.2rem;
+}
+
+.modal_title {
+  color: var(--primary_color);
+}
+.modal input {
+  width: 20rem;
+}
+.label_mes {
+  position: relative;
+  bottom: 4.2rem;
+}
+.modal_form input {
+  font-family: inherit;
+  font-size: 1.2rem;
+  border: 1px solid rgb(139, 131, 131);
+  margin-top: 2px;
+  height: 2rem;
+}
+.modal_mes {
+  height: 10rem;
+  width: 20rem;
+  resize: none;
+  font-family: inherit;
+  font-size: 1.2rem;
+  border: 1px solid rgb(139, 131, 131);
+}
+.btn_send-modal {
+  grid-column: 1 / span 2;
+  align-items: center;
+  height: 2.5rem;
+  font-size: 1.5rem;
+  font-family: inherit;
+}
+.btn_send-modal:hover {
+  transition: all 0.5s;
+  color: rgb(252, 193, 85);
+  background-color: var(--darker_primary_color);
+}
+.btn_close-modal {
+  position: absolute;
+  font-family: inherit;
+  font-size: 3.5rem;
+  color: var(--darker_primary_color);
+  right: 2rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.btn_close-modal:hover {
+  transition: all 0.5s;
+  transform: rotateY(180deg);
+}
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
