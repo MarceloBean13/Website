@@ -8,6 +8,8 @@ const btnLeftSlide = document.querySelector(".btn_left");
 const btnRightSlide = document.querySelector(".btn_right");
 const btnFooterModal = document.querySelector(".a_open-modal");
 const btnFooterToTop = document.querySelector(".btn_footer");
+const btnHam = document.querySelector(".btn_ham");
+
 //NAV BAR
 const navBar = document.querySelector(".nav");
 const navLinks = document.querySelector(".nav_links");
@@ -152,3 +154,9 @@ function emailSent() {
     ` Obrigado pelo contacto, ${name}! Entrarei em contacto o mais breve possível =)`
   );
 }
+
+//?IMPLMENTING THE HAMURGUER BUTTON
+btnHam.addEventListener("click", function (e) {
+  e.preventDefault();
+  navLinks.classList.toggle("active");
+});
