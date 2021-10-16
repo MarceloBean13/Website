@@ -517,6 +517,17 @@ header {
 
 @media (max-width: 1000px) {
   /*!NAV*/
+  .nav,
+  .sticky {
+    padding: 0;
+    height: 5rem;
+  }
+  .photo {
+    height: 5rem;
+  }
+  .name {
+    font-size: 1.4rem;
+  }
   .nav_links.active {
     display: flex;
   }
@@ -540,8 +551,9 @@ header {
   /*!IMAGES*/
   .img_left,
   .img_sales {
-    height: 5rem;
+    height: 8rem;
   }
+
   .img_well,
   .img_tree {
     height: 10rem;
@@ -587,7 +599,16 @@ header {
     position: inherit;
     left: 0%;
   }
-
+  .div_ferr_img {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 1rem;
+    grid-column: 1;
+  }
+  .div_articles {
+    display: grid;
+    justify-items: center;
+  }
   /*!LISTS*/
   .ul_footer {
     display: none;
