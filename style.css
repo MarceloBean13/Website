@@ -550,12 +550,12 @@ header {
   .img_css,
   .img_general,
   .img_sql,
-  .img_vim,
-  .img_c,
-  .img_sql {
+  .img_c {
     height: 5rem;
   }
-  .img_blender {
+  .img_blender,
+  .img_sql,
+  .img_vim {
     height: 3rem;
   }
   /*!SECTIONS*/
