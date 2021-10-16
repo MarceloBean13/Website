@@ -522,10 +522,11 @@ header {
     height: 10rem;
   }
   .section-1 {
-    padding: 5rem 2rem;
+    padding: 8rem 5rem;
   }
   .section {
-    padding: 0 2rem;
+    display: block;
+    padding: 2rem 1rem;
     font-size: 0.7rem;
   }
   .nav_links.active {
@@ -535,7 +536,10 @@ header {
     font-size: 0.7rem;
     padding: 0.8rem;
   }
-
+  .btn_git {
+    padding: 0;
+    margin: 0;
+  }
   .btn_ham {
     display: flex;
   }
