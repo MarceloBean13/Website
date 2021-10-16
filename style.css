@@ -270,9 +270,25 @@ header {
   text-decoration: none;
   /* padding: 0rem 5rem 5rem 10rem; */
 }
+
 .btn_footer:hover {
   color: var(--primary_color);
   transform: scale(1.2, 1.2);
+}
+
+.btn_git:link,
+.btn_git:visited {
+  text-decoration: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 3rem;
+  color: inherit;
+  background-color: var(--primary_color);
+  transition: all 0.5s;
+}
+.btn_git:hover,
+.btn_hover:active {
+  color: rgb(252, 193, 85);
+  background-color: var(--darker_primary_color);
 }
 /*! SECTIONS */
 .section {
@@ -500,6 +516,14 @@ header {
 }
 
 @media (max-width: 1000px) {
+  /*!NAV*/
+  .nav_links.active {
+    display: flex;
+  }
+  .nav_list {
+    font-size: 0.7rem;
+    padding: 0.8rem;
+  }
   .nav {
     padding: 0rem, 0.1rem;
   }
@@ -513,6 +537,7 @@ header {
     left: 0.5rem;
     background-color: rgb(255, 255, 255, 0.85);
   }
+  /*!IMAGES*/
   .img_left,
   .img_sales {
     height: 5rem;
@@ -521,6 +546,19 @@ header {
   .img_tree {
     height: 10rem;
   }
+  .img-lazy,
+  .img_css,
+  .img_general,
+  .img_sql,
+  .img_vim,
+  .img_c,
+  .img_sql {
+    height: 5rem;
+  }
+  .img_blender {
+    height: 3rem;
+  }
+  /*!SECTIONS*/
   .section-1 {
     padding: 8rem 5rem;
   }
@@ -529,28 +567,32 @@ header {
     padding: 2rem 1rem;
     font-size: 0.7rem;
   }
-  .nav_links.active {
-    display: flex;
+  .section_footer {
+    padding: 1rem 2rem 5rem;
   }
-  .nav_list {
-    font-size: 0.7rem;
-    padding: 0.8rem;
+  .div_footer-section {
+    display: grid;
+    gap: 1rem;
   }
-  .btn_git {
-    padding: 0;
-    margin: 0;
-  }
+  /*!BUTTONS*/
   .btn_ham {
     display: flex;
   }
+  .btn_footer {
+    display: none;
+  }
+
+  /*!DIVS*/
   .div_footer-section {
     position: inherit;
     left: 0%;
   }
+
+  /*!LISTS*/
   .ul_footer {
     display: none;
   }
-  .btn_footer {
-    display: none;
+  h5 {
+    padding: 0;
   }
 }
