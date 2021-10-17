@@ -115,7 +115,7 @@ const imgObserver = new IntersectionObserver(imgObCallFunc, {
 });
 imgsDataSrc.forEach((img) => imgObserver.observe(img));
 
-//?OPEN MODAL
+//?OPEN & CLOSE MODAL
 
 const openModal = () => {
   modal.classList.remove("hidden");
@@ -128,6 +128,7 @@ const closeModal = () => {
 btnOpenModal.addEventListener("click", openModal);
 btnCloseModal.addEventListener("click", closeModal);
 btnFooterModal.addEventListener("click", openModal);
+overlay.addEventListener("click", closeModal);
 
 //? GO BACK TO TOP
 btnFooterToTop.addEventListener("click", function (e) {
@@ -151,11 +152,11 @@ function emailSent() {
   const name = document.getElementById("name").value;
 
   alert(
-    ` Obrigado pelo contacto, ${name}! Entrarei em contacto o mais breve possível =)`
+    ` Obrigado pela mensagem, ${name}! Entrarei em contacto o mais breve possível.`
   );
 }
 
-//?IMPLMENTING THE HAMURGUER BUTTON
+//?IMPLMENTING THE HAMBURGER BUTTON
 btnHam.addEventListener("click", function (e) {
   e.preventDefault();
   navLinks.classList.toggle("active");
