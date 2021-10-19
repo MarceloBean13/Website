@@ -186,7 +186,9 @@ header {
 .nav_list {
   padding-left: 4rem;
 }
-
+.nav_item {
+  text-align: center;
+}
 .nav_item:link,
 .nav_item:visited {
   font-weight: 900;
@@ -222,6 +224,11 @@ header {
   height: 7rem;
 }
 
+.link_language {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
 /*! BUTTONS*/
 .btn_ham {
   position: absolute;
@@ -540,6 +547,7 @@ header {
     padding: 0rem, 0.1rem;
   }
   .nav_links {
+    text-align: center;
     display: none;
     flex-direction: row;
     width: 100%;

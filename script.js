@@ -13,6 +13,7 @@ const btnHam = document.querySelector(".btn_ham");
 //NAV BAR
 const navBar = document.querySelector(".nav");
 const navLinks = document.querySelector(".nav_links");
+const langChange = document.querySelector(".link_language");
 
 //SECTIONS
 const sectionOne = document.querySelector("#section-1");
@@ -160,4 +161,11 @@ function emailSent() {
 btnHam.addEventListener("click", function (e) {
   e.preventDefault();
   navLinks.classList.toggle("active");
+});
+
+langChange.addEventListener("click", (e) => {
+  e.preventDefault();
+  if (e.target.textContent === "Português")
+    window.location.href = "../index.html";
+  else window.location.href = "Pages/indexEn.html";
 });
