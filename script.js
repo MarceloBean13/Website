@@ -9,6 +9,8 @@ const btnRightSlide = document.querySelector(".btn_right");
 const btnFooterModal = document.querySelector(".a_open-modal");
 const btnFooterToTop = document.querySelector(".btn_footer");
 const btnHam = document.querySelector(".btn_ham");
+const btnRightSlideImg = document.querySelector(".btn_right-img");
+const btnLeftSlideImg = document.querySelector(".btn_left-img");
 
 //NAV BAR
 const navBar = document.querySelector(".nav");
@@ -21,6 +23,7 @@ const sectionShow = document.querySelectorAll(".section");
 
 //SLIDES
 const slides = document.querySelectorAll(".div_slide");
+const slidesImg = document.querySelectorAll(".div_slide-img");
 
 //MODAL
 const modal = document.querySelector(".modal");
@@ -97,6 +100,30 @@ goToSlide(0);
 btnLeftSlide.addEventListener("click", previousSlide);
 btnRightSlide.addEventListener("click", nextSlide);
 
+//? IMPLEMENTING SLIDE IMAGES CHANGE
+
+let countImgSlides = 0;
+const maxImgSlides = slidesImg.length;
+
+const previousImgSlide = () => {
+  if (countImgSlides === 0) countImgSlides = maxImgSlides - 1;
+  else countImgSlides++;
+  goToImgSlide(countImgSlides);
+};
+const nextImgSlide = () => {
+  if (countImgSlides === maxImgSlides - 1) countImgSlides = 0;
+  else countImgSlides++;
+  goToImgSlide(countImgSlides);
+};
+
+const goToImgSlide = (slide) => {
+  slidesImg.forEach((s, i) => {
+    s.style.transform = `translateX(${100 * (i - slide)}%)`;
+  });
+};
+goToImgSlide(0);
+btnLeftSlideImg.addEventListener("click", previousImgSlide);
+btnRightSlideImg.addEventListener("click", nextImgSlide);
 //?IMPLEMENTING LAZY IMAGES CHANGE
 //Selecting all img elements with data-src attribute
 const imgsDataSrc = document.querySelectorAll("img[data-src]");
