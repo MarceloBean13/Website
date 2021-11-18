@@ -107,7 +107,7 @@ const maxImgSlides = slidesImg.length;
 
 const previousImgSlide = () => {
   if (countImgSlides === 0) countImgSlides = maxImgSlides - 1;
-  else countImgSlides++;
+  else countImgSlides--;
   goToImgSlide(countImgSlides);
 };
 const nextImgSlide = () => {
